@@ -1,7 +1,8 @@
-let myInput=".._......_"
+let myInput=".._.._."
 let val=true
 for (let i=0;i<myInput.length;i++)
 {
+    debugger
     if (myInput[i]=="." || myInput[i]=="_")
         val=true
         else
@@ -9,7 +10,6 @@ for (let i=0;i<myInput.length;i++)
         val=false
         break;
         }
-        
 }
 if(myInput.length<=9 && myInput.length>=3 && val)
 console.log("valid")
