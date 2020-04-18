@@ -1,6 +1,12 @@
 function mapRange(firstRang, secRang, num) {
-  let coefficient = (firstRang[0] + firstRang[1]) / num;
-  let output = (secRang[0] + secRang[1]) / coefficient;
-  return output;
+  if (num >= firstRang[0] && num <= firstRang[1]) {
+    return (
+      ((num - firstRang[0]) / (firstRang[1] - firstRang[0])) *
+        (secRang[1] - secRang[0]) +
+      secRang[0]
+    );
+  } else {
+    return "not in rang";
+  }
 }
-console.log(mapRange([10, 30], [20, 40], [20]));
+console.log(mapRange([1, 100], [1, 5], 70));
